@@ -56,6 +56,7 @@ Add additional notes about how to deploy this on a live system]
 
 * [[p5*js](p5js.org) - Javascript animation
 * [GitHubGist](https://gist.github.com/) - Formatting tips
+* Written in HTML on Brackets
 
 ## Authors
 
@@ -71,4 +72,8 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 * PurpleBooth for the README Template
 * Professor Adam Tindale
 * CSS-Tricks.com
-* YouTube Placeholder is Orchard Layout and Summer Update 2016 (https://www.youtube.com/watch?v=zoSkHI5beXI)
+* Unknown contributor
+* Chris Coyier
+* Jon Hick
+* Stack Overflow user Mohamad
+* YouTube Placeholder is "Orchard Layout and Summer Update 2016" (https://www.youtube.com/watch?v=zoSkHI5beXI)
