@@ -71,3 +71,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 * PurpleBooth for the README Template
 * Professor Adam Tindale
 * CSS-Tricks.com
+* YouTube Placeholder is Orchard Layout and Summer Update 2016 (https://www.youtube.com/watch?v=zoSkHI5beXI)
