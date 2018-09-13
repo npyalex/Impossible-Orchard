@@ -17,7 +17,8 @@ It is intended that a complete functional web site with most features, will exis
 
 ## Built With
 
-* [[p5*js](p5js.org) for Javascript animation
+* [p5*js](p5js.org) for Javascript animation
+* [tracking.js] for Javascript AR tracking
 * [GitHubGist](https://gist.github.com/) for Formatting tips
 * Written in HTML and CSS using Brackets
 

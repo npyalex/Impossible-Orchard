@@ -1,6 +1,5 @@
 var capture;
 
-
 function setup() {
   createCanvas(windowWidth, windowHeight);
   capture = createCapture(VIDEO);
@@ -15,5 +14,7 @@ function windowResized() {
 function draw() {
   background(255);
   image(capture, 0, 0, windowWidth, windowHeight);
-  //filter('INVERT');
+    //BLUR filter has an effect I want but it kills the speed of the page
+// filter(BLUR,10);
+
 }
