@@ -2,14 +2,18 @@ var capture;
 
 
 function setup() {
-  createCanvas(390, 240);
+  createCanvas(windowWidth, windowHeight);
   capture = createCapture(VIDEO);
-  capture.size(320, 240);
+  capture.size(windowWidth, windowHeight);
   capture.hide();
+  background(255, 0, 200);
 }
 
+function windowResized() {
+    resizeCanvas(windowWidth, windowHeight);
+}
 function draw() {
   background(255);
-  image(capture, 0, 0, 320, 240);
-  filter('INVERT');
+  image(capture, 0, 0, windowWidth, windowHeight);
+  //filter('INVERT');
 }

@@ -74,3 +74,9 @@
 	height: 100%;
     z-index: 1;
 }
+body
+{
+    position: fixed; 
+    overflow-y: scroll;
+    width: 100%;
+}
