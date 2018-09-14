@@ -1,24 +1,33 @@
 <html>
     <head>
-            <title>imo_tracking - first attempt</title>
-            <script src=/tracking.js-master/tracking.js-master/build/tracking-min.js></script>
+            <meta charset=utf-8>
+            <title>imo_tracking - </title>
+        <link rel="stylesheet" href="imo_style.css">
+        <script src="/p5/p5.js"></script>
+        <script src="/p5/addons/p5.dom.js"></script>
+        <script src="/tracking.js-master/tracking.js-master/build/tracking-min.js"></script>
     </head>
     <body>
-        <video id="myVideo" width="400" height="300" preload autoplay loop muted></video>
+            <div id="left"></div>
+            <div id="right"></div>
+            <div id="top"></div>
+            <div id="bottom"></div>
+<video id="myVideo" width="innerWidth" height="innerHeight" preload autoplay loop muted></video>
     <script>
-  var colors = new tracking.ColorTracker(['magenta', 'cyan', 'yellow']);
+        var colors = new tracking.ColorTracker(['magenta', 'cyan', 'yellow']);
 
-  colors.on('track', function(event) {
-    if (event.data.length === 0) {
+        colors.on('track', function(event) {
+            if (event.data.length === 0) {
       // No colors were detected in this frame.
-    } else {
-      event.data.forEach(function(rect) {
+            } else {
+        event.data.forEach(function(rect) {
         console.log(rect.x, rect.y, rect.height, rect.width, rect.color);
       });
     }
   });
-
-  tracking.track('#myVideo', colors);
-    </script>
+window.onload = function (){
+        tracking.track('#myVideo', colors, {camera:true});
+}
+ </script>
 </body>
 </html>

@@ -9,12 +9,12 @@ function setup() {
 }
 
 function windowResized() {
-    resizeCanvas(windowWidth, windowHeight);
+    resizeCanvas(innerWidth, innerHeight);
 }
 function draw() {
   background(255);
   image(capture, 0, 0, windowWidth, windowHeight);
     //BLUR filter has an effect I want but it kills the speed of the page
-// filter(BLUR,10);
+ // filter(BLUR,10);
 
 }
