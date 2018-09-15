@@ -39,5 +39,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 * CSS-Tricks' many unknown contributors
 * Chris Coyier
 * Jon Hick
+* w3bschools.com
 * Stack Overflow user Mohamad
+* Jean-Philippe Cote from tangiblejs.com for the ColorTrackingExample code
 * YouTube Placeholder is "Orchard Layout and Summer Update 2016" (https://www.youtube.com/watch?v=zoSkHI5beXI)

@@ -76,11 +76,15 @@
 	height: 100%;
     z-index: 1;
 }
-body
+.body
 {
     position: fixed; 
     overflow-y: scroll;
     width: 100%;
+}
+body
+{
+    overflow:hidden;
 }
 #myVideo {
     position: fixed;
@@ -88,4 +92,10 @@ body
     bottom 0;
     min-width: 100%;
     min-height:100%;
+}
+canvas {
+  display: block;
+  position: absolute;
+  top: 0;
+  pointer-events: none;
 }

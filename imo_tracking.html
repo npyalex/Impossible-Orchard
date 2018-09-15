@@ -6,28 +6,53 @@
         <script src="/p5/p5.js"></script>
         <script src="/p5/addons/p5.dom.js"></script>
         <script src="/tracking.js-master/tracking.js-master/build/tracking-min.js"></script>
+        <script src="tracking.js-master/tracking.js-master/src/trackers/ColorTracker.js"></script>
     </head>
     <body>
             <div id="left"></div>
             <div id="right"></div>
             <div id="top"></div>
             <div id="bottom"></div>
-<video id="myVideo" width="innerWidth" height="innerHeight" preload autoplay loop muted></video>
+<img is="image-color-tracking" target="magenta cyan yellow" />
+<canvas is="canvas-color-tracking" target="magenta cyan yellow"></canvas>
+<video id="myVideo" is="video-color-tracking" target="magenta cyan yellow" width="innerWidth" height="innerHeight" preload autoplay loop muted></video>
     <script>
-        var colors = new tracking.ColorTracker(['magenta', 'cyan', 'yellow']);
+var colors = new tracking.ColorTracker(['magenta', 'cyan', 'yellow']);
 
-        colors.on('track', function(event) {
+colors.on('track', function(event) {
             if (event.data.length === 0) {
       // No colors were detected in this frame.
             } else {
         event.data.forEach(function(rect) {
         console.log(rect.x, rect.y, rect.height, rect.width, rect.color);
       });
+function plotRectangle(el, rect) {
+      var div = document.createElement('div');
+      div.style.position = 'absolute';
+      div.style.border = '2px solid ' + (rect.color || 'magenta');
+      div.style.width = rect.width + 'px';
+      div.style.height = rect.height + 'px';
+      div.style.left = el.offsetLeft + rect.x + 'px';
+      div.style.top = el.offsetTop + rect.y + 'px';
+      document.body.appendChild(div);
+      return div;
+    }
     }
   });
-window.onload = function (){
-        tracking.track('#myVideo', colors, {camera:true});
-}
+        
+tracking.track('#myVideo', colors,{camera:true});
+// window.onload = function (){
+      //  tracking.track('#myVideo', colors, {camera:true}); 
+//}
+    var img = document.querySelector('img');
+
+
+        
+    img.addEventListener('track', function(event) {
+      event.detail.data.forEach(function(rect) {
+        plotRectangle(img, rect);
+      });
+    });
  </script>
 </body>
 </html>

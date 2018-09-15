@@ -1,0 +1,30 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="trackingstyles.css">
+    <script src="tracking.js-master/tracking.js-master/build/tracking-min.js"></script>
+    <script src="tracking-script.js"></script>
+</head>
+<body>
+    <div class="display">
+      <video id="webcam" width="640" height="480" autoplay></video>
+      <canvas id="canvas" width="640" height="480"></canvas>
+    </div>
+    <div class="ui">
+ 
+      <div class="controls">
+ 
+        <p>Click on the webcam feed to pick a color, then adjust tolerance.</p>
+ 
+        <div>
+          <label for="tolerance">Tolerance:</label>
+          <input id="tolerance" type="range" value="10" max="255" min="0" step="1">
+        </div>
+ 
+      </div>
+ 
+      <div id="color"></div>
+ 
+    </div>
+</body>    
+</html>
