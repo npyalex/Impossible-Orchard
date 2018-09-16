@@ -11,19 +11,22 @@
   </head>
 
   <body>
-
+            <div id="left"></div>
+            <div id="right"></div>
+            <div id="top"></div>
+            <div id="bottom"></div>
     <div class="display">
       <video id="webcam" width="640" height="480" autoplay></video>
       <canvas id="canvas" width="640" height="480"></canvas>
     </div>
 
- <div class="ui">
+<div class="ui">
 
       <div class="controls">
 
-        <p>Click on the webcam feed to pick a color, then adjust tolerance.</p>
+     <!--   <p>Click on the webcam feed to pick a color, then adjust tolerance.</p>-->
 
-        <div>
+       <div>
           <label for="tolerance">Tolerance:</label>
           <input id="tolerance" type="range" value="100" max="255" min="0" step="1">
         </div>
