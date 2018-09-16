@@ -7,28 +7,21 @@ body {
 
 .display {
   position: fixed;
-  width: 100%;
-  height: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 video {
   position: fixed;
-  top:0;
-  bottom: 0;
-  left: 0;
-  right: 0;
   /*transform: scaleX(-1);*/
-    /* Changing width and height messes up the tracking accuracy. I think this is because the native resolution of the video/canvas is 680x480 and changing it messes up tracking again. */
+    /* Changing width and height messes up the tracking accuracy. I think this is because the native resolution of the video/canvas is 680x480 and changing it spaces out the pixels the canvas will track with */
  /* width: 100%;
   height: 100%; */
 }
 
 canvas {
   position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
   pointer-events: none; /* Prevents canvas from intercepting clicks */
   /*transform: scaleX(-1); */
  /* width: 100%;

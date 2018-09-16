@@ -4,7 +4,8 @@ window.addEventListener("load", function(e) {
   console.log("Page loaded!");
 
   // Store the color we will be tracking (selectable by clicking on the webcam feed)
-  var color = {r: 255, g: 0, b: 0};
+  var color = {r: 69, g: 25, b: 34};
+ // var color = {r: 255, g: 0, b: 0};
 
   // Grab reference to the tags we will be using
   var slider = document.getElementById("tolerance");
@@ -44,7 +45,7 @@ window.addEventListener("load", function(e) {
   webcam.addEventListener("click", function (e) {
 
     // Grab color from the video feed where the click occured
-//    var c = getColorAt(webcam, e.offsetX, e.offsetY);
+ //   var c = getColorAt(webcam, e.offsetX, e.offsetY);
 
     // Update target color
     color.r = c.r;
