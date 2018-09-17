@@ -4,13 +4,14 @@
 
   <head>
     <meta charset="UTF-8">
-    <title>Red and Green Apple Detection</title>
+    <title>Red Apple Detection by IMO</title>
     <link rel="stylesheet" href="/ColorTrackingExample/styles.css">
     <script src="/ColorTrackingExample/tracking-min.js"></script>
     <script src="/ColorTrackingExample/script.js"></script>
   </head>
 
   <body>
+      <!-- the border -->
             <div id="left"></div>
             <div id="right"></div>
             <div id="top"></div>
@@ -20,6 +21,7 @@
       <canvas id="canvas" width="640" height="480"></canvas>
     </div>
 
+      <!-- code came with a UI for changing target colour - I couldn't disable it without breaking the tracking within the allotted time, so I hid it -->
 <div class="ui">
 
       <div class="controls">
@@ -27,6 +29,7 @@
      <!--   <p>Click on the webcam feed to pick a color, then adjust tolerance.</p>-->
 
        <div>
+           <!-- from the UI, the Tolerance variable needs to exist in order for the tracking to work -->
           <label for="tolerance">Tolerance:</label>
           <input id="tolerance" type="range" value="22" max="255" min="0" step="1">
         </div>
